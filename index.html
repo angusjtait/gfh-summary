@@ -48,9 +48,44 @@
 
 <p>Version control is a practice as much as it is a tool we use.</p>
 
-<p>Git keeps a copy of every version of a project inside a <em>repository</em>. Versions are <em>committed</em> to the repo in logical steps.</p>
+<p>Git keeps a copy of every version of a project inside a <strong>repository</strong>. Versions are <strong>committed</strong> to the repo in logical steps. Commits are organised into <strong>branches</strong>, with a master branch that represents the offical, primary version. Commits can be thought of as <em>significant changes</em>.</p>
+
+<p>Git was invented by Linus Torvalds to help with the Linux project. Git is designed to be decentralised. This means there is not just one source of the code base, but many sources. Each developer works on their own local copy of a project.</p>
+
+<p>Although only one copy of each file is visible in a working folder, Git is storing copies of the same file over and over, at each different state that has been committed.</p>
+
+<p>Git makes very little attempt to explain its system through metaphors, such as the way OS X uses folder icons to denote directories. It is very logical and will not do more that what you tell it to do.</p>
+
+<blockquote>
+<p>Git has more than seventy-five command-line functions, every single one of which has a specific job, with specific inputs and expected results.</p>
+</blockquote>
+
+<h3 id="personalnotes">Personal notes</h3>
+
+<p>Git is different from the Dropbox style of version control. Dropbox automatically retains a copy of a file every time it is saved, but only keeps five of the most recent copies. Git, on the other hand, does not do this automatically and waits for you to decide when a copy should be saved. It does, however, retain every single copy that you commit.</p>
 
 <h2 id="chapter2:basics">Chapter 2: Basics</h2>
+
+<h3 id="usinggitforthefirsttime.">Using Git for the first time.</h3>
+
+<p>If you open up the Terminal app on a Mac, and type <code>git</code>, your Mac will prompt you to install the Apple Command Line Tools, which includes Git.</p>
+
+<h3 id="somebasicshellcommands">Some basic shell commands</h3>
+
+<p>These are not specific to Git but are useful for navigating around folders on the command line.</p>
+
+<p><code>pwd</code> (print working directory) will display your current location as an absolute path.<br/>
+Example of a path: <code>/Volumes/Macintosh HD/Users/Angus/dev</code>.</p>
+
+<p><code>cd</code> (change directory) is used in conjunction with a path name to navigate through folders.<br/>
+Example: <code>cd ../images</code> would move back up out of the current folder and then down into a folder called <em>images</em>.</p>
+
+<p><code>mkdir</code> (make directory) will create a new folder<br/>
+Example: <code>mkdir css</code> will make a new folder, in the current location, called <em>css</em>.</p>
+
+<p><code>ls</code> (list) will show a list of all items within the current location.</p>
+
+<p>All the tasks above can be done by using the Finder window instead. </p>
 
 <h2 id="chapter3:branches">Chapter 3: Branches</h2>
 
