@@ -1,40 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8"/>
-</head>
-<body>
-<h1 id="gitforhumans">Git for Humans</h1>
+<h1>Git for Humans</h1>
 
-<h2 id="quickreferencetoallcommandswithinthebook">Quick reference to all commands within the book</h2>
+<h2>Quick reference to all commands within the book</h2>
 
-<table>
-<colgroup>
-<col style="text-align:left;"/>
-<col style="text-align:left;"/>
-<col style="text-align:left;"/>
-</colgroup>
-
-<thead>
-<tr>
-	<th style="text-align:left;">Name</th>
-	<th style="text-align:left;">Command</th>
-	<th style="text-align:left;">Usage</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-	<td style="text-align:left;">checkout</td>
-	<td style="text-align:left;"><code>git checkout</code></td>
-	<td style="text-align:left;">Use to switch over to a branch, or to roll back to a particular commit.</td>
-</tr>
-</tbody>
-</table>
+<p>Name | Command | Usage
+--- | --- | ---
+checkout | <code>git checkout</code> | Use to switch over to a branch, or to roll back to a particular commit.</p>
 
 <p>A summary of each chapter of the book.</p>
 
-<h3 id="contents">Contents</h3>
+<h3>Contents</h3>
 
 <ol>
 <li>Chapter 1: Thinking in Versions</li>
@@ -44,7 +18,7 @@
 <li>Chapter 5: History</li>
 </ol>
 
-<h2 id="chapter1:thinkinginversions">Chapter 1: Thinking in Versions</h2>
+<h2>Chapter 1: Thinking in Versions</h2>
 
 <p>Version control is a practice as much as it is a tool we use.</p>
 
@@ -60,17 +34,17 @@
 <p>Git has more than seventy-five command-line functions, every single one of which has a specific job, with specific inputs and expected results.</p>
 </blockquote>
 
-<h3 id="personalnotes">Personal notes</h3>
+<h3>Personal notes</h3>
 
 <p>Git is different from the Dropbox style of version control. Dropbox automatically retains a copy of a file every time it is saved, but only keeps five of the most recent copies. Git, on the other hand, does not do this automatically and waits for you to decide when a copy should be saved. It does, however, retain every single copy that you commit.</p>
 
-<h2 id="chapter2:basics">Chapter 2: Basics</h2>
+<h2>Chapter 2: Basics</h2>
 
-<h3 id="usinggitforthefirsttime.">Using Git for the first time.</h3>
+<h3>Using Git for the first time.</h3>
 
 <p>If you open up the Terminal app on a Mac, and type <code>git</code>, your Mac will prompt you to install the Apple Command Line Tools, which includes Git.</p>
 
-<h3 id="somebasicshellcommands">Some basic shell commands</h3>
+<h3>Some basic shell commands</h3>
 
 <p>These are not specific to Git but are useful for navigating around folders on the command line.</p>
 
@@ -85,13 +59,46 @@ Example: <code>mkdir css</code> will make a new folder, in the current location,
 
 <p><code>ls</code> (list) will show a list of all items within the current location.</p>
 
-<p>All the tasks above can be done by using the Finder window instead. </p>
+<p>All the tasks above can be done by using the Finder window instead.</p>
 
-<h2 id="chapter3:branches">Chapter 3: Branches</h2>
+<p>Git commands have a standard format: <code>git commandName parameter1 parameter2 --option</code>. There are over 100 'commandName' that can be used. Many of the options will have a shortcut eg. --global can be written as -g.</p>
 
-<h2 id="chapter4:remotes">Chapter 4: Remotes</h2>
+<h3>Configuring Git</h3>
 
-<h2 id="chapter5:history">Chapter 5: History</h2>
+<p><code>git config --global user.name &quot;User Name&quot;</code> will change the username associated with all commits on this machine.
+<code>git config --global user.email &quot;user.name@email.com&quot;</code> will change the email address associated with the username.</p>
 
-</body>
-</html>
+<p><code>--global</code> can be omitted to change settings on the current repository only.</p>
+
+<h3>Creating a new repository</h3>
+
+<p>Firstly, a folder must be created to work in. This can be done either through the command line, or within Finder. Next, navigate to the new folder in the Terminal window, and type <code>git init</code> to start the new repository.</p>
+
+<p>Another way to start a Git project is to clone from an existing repository. The command for this is <code>git clone</code>, followed by the URL.<br/>
+Example: <code>git clone https://clinentco.co/our-website.git</code>.</p>
+
+<blockquote>
+<p>Git proceeds by addition. Even though files in your project can be created, deleted, or changed, the commits tracking those changes are always <em>added</em>. When you remove a file, you're adding a commit.</p>
+</blockquote>
+
+<p>You can check the current state of your repository at any time by type <code>git status</code>.</p>
+
+<p>Before a file can be committed to the repository, it needs to be added to Git's database (<em>staged</em>). To do this, use the command <code>git add</code>, followed by the file name.<br/>
+Example: <code>git add index.html</code><br/>
+You can also add all files by typing <code>git add .</code></p>
+
+<p>Once a file has been staged, it can now be committed. A commit requires a message from the user. Commits can be made by type <code>git commit --message &quot;Insert message&quot;</code>.</p>
+
+<p>You can also add all files and commit them in one short command by typing <code>git commit -am</code>.</p>
+
+<p><strong>Note</strong>: Git has a very matter-of-fact personality, and generally won't give you a pat on the back if everything is going well. Don't expect a return message to say that your files were committed.</p>
+
+<h3>Deleting files</h3>
+
+<p>The command <code>git rm</code> is used to remove a file. This change then needs to be committed and pushed.</p>
+
+<h2>Chapter 3: Branches</h2>
+
+<h2>Chapter 4: Remotes</h2>
+
+<h2>Chapter 5: History</h2>
