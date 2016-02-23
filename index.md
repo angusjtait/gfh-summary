@@ -14,6 +14,7 @@ A summary of each chapter of the book.
 3. Chapter 3: Branches
 4. Chapter 4: Remotes
 5. Chapter 5: History
+6. Chapter 6: Additional notes
 
 ## Chapter 1: Thinking in Versions
 
@@ -132,6 +133,8 @@ Once the conflict is resolved, the file can be staged and committed again.
 
 To reduce merge conflicts, you can merge new commits from the master into your current branch.
 
+**Notes** Deleting a branch is easy. Type `git branch -d nameOfBranch`. The branch will only be deleted if it has already been merged.
+
 ## Chapter 4: Remotes
 
 Remote repositories are copies of your Git project that live somewhere else, like a separate server. A remote can also just be a different folder on your computer.
@@ -163,7 +166,7 @@ Example: `git remote add origin https://gitforhumans.info/our-website.git`
 
 Use  `git log` to have a look at all the commits, in reverse chronological order.
 
-You can simplify the output of the log by typing `git log --pretty=oneline`.
+You can simplify the output of the log by typing `git log --pretty=oneline` or `git log oneline`
 
 You can also look at the history of a particular files by typing `git log fileName`
 
@@ -173,3 +176,23 @@ You can also look at the history of a particular files by typing `git log fileNa
 
 So, checking out a commit will give you that specific commit. It is not a branch. It is basically used to check how the app was running at that particular time.
 Returning from the detached head state is easy - just checkout a branch again.
+
+## Chapter 6: Additional notes
+
+Additional Git commands that are not covered in the book but may be helpful for beginners.
+
+#### Stash
+
+Stash works a bit like a clipboard. It cuts all the unstaged changes in your current working folder and holds on to them until you are ready to paste them back down in place. This is useful if you are busy working on a branch and need to jump over to another branch before you've had a chance to finish your work and make a proper commit. It's also useful if you've started editing the wrong branch by mistake.
+
+Type `git stash` to grab all your current changes. After doing whatever it is you need to do, type `git stash pop` to plonk your work back down in place.
+
+
+#### Cherry picking
+
+Cherry picking is used to take a particular commit from one branch and apply it to another branch. Start off on the branch you want to apply the changes to then type `git cherry-pick commitID`. You can find the commit ID that you want to cherry pick by looking through the log (`git log`).
+
+Other resources for continued learning:
+
+https://24ways.org/2014/dealing-with-emergencies-in-git/
+https://github.com/blog/2083-start-learning-git-and-github-today-with-self-paced-training
