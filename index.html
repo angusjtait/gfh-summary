@@ -1,28 +1,195 @@
-<h1>Git for Humans</h1>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1 id="gitforhumans">Git for Humans</h1>
 
-<h2>Quick reference to all commands within the book</h2>
+<p>They say Linus Torvalds designed and built Git in two weeks.<br/>
+Me, I read this book, I wrote summaries, I did it all in 24 days.<br/>
+And while it&#8217;s true that I&#8217;d used git for years prior,<br/>
+It did not aid this rapid pace.</p>
 
-<p>Name | Command | Usage
---- | --- | ---
-checkout | <code>git checkout</code> | Use to switch over to a branch, or to roll back to a particular commit.</p>
+<p>Git for Humans, from A Book Apart, <a href="https://abookapart.com/products/git-for-humans">is available here</a></p>
 
-<p>A summary of each chapter of the book.</p>
+<h2 id="quickreferenceforcommandsinthisbook">Quick reference for commands in this book</h2>
 
-<h3>Contents</h3>
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Name</th>
+	<th style="text-align:left;">Command</th>
+	<th style="text-align:left;">Usage</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;">config user name</td>
+	<td style="text-align:left;"><code>git config --global user.name &quot;User Name&quot;</code></td>
+	<td style="text-align:left;">Change the user name</td>
+</tr>
+<tr>
+	<td style="text-align:left;">config user email</td>
+	<td style="text-align:left;"><code>git config --global user.email&quot;</code></td>
+	<td style="text-align:left;">Change the email associated with the user name</td>
+</tr>
+<tr>
+	<td style="text-align:left;">init</td>
+	<td style="text-align:left;"><code>git init</code></td>
+	<td style="text-align:left;">Create a new repo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">clone</td>
+	<td style="text-align:left;"><code>git clone url</code></td>
+	<td style="text-align:left;">Create a clone of the repo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">status</td>
+	<td style="text-align:left;"><code>git status</code></td>
+	<td style="text-align:left;">Check the current state of the repo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">staging</td>
+	<td style="text-align:left;"><code>git add fileName</code></td>
+	<td style="text-align:left;">Add this filename to staging</td>
+</tr>
+<tr>
+	<td style="text-align:left;">add all</td>
+	<td style="text-align:left;"><code>git add .</code></td>
+	<td style="text-align:left;">Add all files with changes to staging</td>
+</tr>
+<tr>
+	<td style="text-align:left;">commit</td>
+	<td style="text-align:left;"><code>git commit -m &quot;Insert message&quot;</code></td>
+	<td style="text-align:left;">Make a commit</td>
+</tr>
+<tr>
+	<td style="text-align:left;">add and commit</td>
+	<td style="text-align:left;"><code>git commit -am</code></td>
+	<td style="text-align:left;">Add all files and make the commit</td>
+</tr>
+<tr>
+	<td style="text-align:left;">delete file</td>
+	<td style="text-align:left;"><code>git rm</code></td>
+	<td style="text-align:left;">Removes a file</td>
+</tr>
+<tr>
+	<td style="text-align:left;">show branches</td>
+	<td style="text-align:left;"><code>git branch</code></td>
+	<td style="text-align:left;">Show a list of branches</td>
+</tr>
+<tr>
+	<td style="text-align:left;">create branch</td>
+	<td style="text-align:left;"><code>git branch nameOfBranch</code></td>
+	<td style="text-align:left;">Create a new branch</td>
+</tr>
+<tr>
+	<td style="text-align:left;">switch branches</td>
+	<td style="text-align:left;"><code>git checkout nameOfBranch</code></td>
+	<td style="text-align:left;">Switch to this branch</td>
+</tr>
+<tr>
+	<td style="text-align:left;">create and switch</td>
+	<td style="text-align:left;"><code>git checkout -b nameOfBranch</code></td>
+	<td style="text-align:left;">Create a new branch and switch to it</td>
+</tr>
+<tr>
+	<td style="text-align:left;">merge</td>
+	<td style="text-align:left;"><code>git merge branchToBeMerged</code></td>
+	<td style="text-align:left;">Merge a branch into the current branch</td>
+</tr>
+<tr>
+	<td style="text-align:left;">delete branch</td>
+	<td style="text-align:left;"><code>git branch -d nameOfBranch</code></td>
+	<td style="text-align:left;">Delete a branch that has been merged</td>
+</tr>
+<tr>
+	<td style="text-align:left;">push to remote</td>
+	<td style="text-align:left;"><code>git push remoteName branchName</code></td>
+	<td style="text-align:left;">Push to the remote, this branch</td>
+</tr>
+<tr>
+	<td style="text-align:left;">pull from remote</td>
+	<td style="text-align:left;"><code>git pull remoteName branchName</code></td>
+	<td style="text-align:left;">Pull from the remote to this branch</td>
+</tr>
+<tr>
+	<td style="text-align:left;">track branch</td>
+	<td style="text-align:left;"><code>git push -u origin branchName</code></td>
+	<td style="text-align:left;">Track a branch</td>
+</tr>
+<tr>
+	<td style="text-align:left;">add remote</td>
+	<td style="text-align:left;"><code>git remote add origin URL</code></td>
+	<td style="text-align:left;">Set up a remote</td>
+</tr>
+<tr>
+	<td style="text-align:left;">show remotes</td>
+	<td style="text-align:left;"><code>git remote</code></td>
+	<td style="text-align:left;">Show a list of branches</td>
+</tr>
+<tr>
+	<td style="text-align:left;">show history</td>
+	<td style="text-align:left;"><code>git log</code></td>
+	<td style="text-align:left;">Show commit history</td>
+</tr>
+<tr>
+	<td style="text-align:left;">show pretty history</td>
+	<td style="text-align:left;"><code>git log --oneline</code></td>
+	<td style="text-align:left;">Show history as single line commits</td>
+</tr>
+<tr>
+	<td style="text-align:left;">show history of file</td>
+	<td style="text-align:left;"><code>git log fileName</code></td>
+	<td style="text-align:left;">Show history of one file</td>
+</tr>
+<tr>
+	<td style="text-align:left;">roll back to commit</td>
+	<td style="text-align:left;"><code>git checkout commitID</code></td>
+	<td style="text-align:left;">Rewind back to an older commit</td>
+</tr>
+<tr>
+	<td style="text-align:left;">begin stash</td>
+	<td style="text-align:left;"><code>git stash</code></td>
+	<td style="text-align:left;">Create a stash of current work</td>
+</tr>
+<tr>
+	<td style="text-align:left;">end stash</td>
+	<td style="text-align:left;"><code>git stash pop</code></td>
+	<td style="text-align:left;">Paste down current stash</td>
+</tr>
+<tr>
+	<td style="text-align:left;">cherry pick</td>
+	<td style="text-align:left;"><code>git cherry-pick commitID</code></td>
+	<td style="text-align:left;">Take changes from particular commit</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="contents">Contents</h3>
 
 <ol>
-<li>Chapter 1: Thinking in Versions</li>
-<li>Chapter 2: Basics</li>
-<li>Chapter 3: Branches</li>
-<li>Chapter 4: Remotes</li>
-<li>Chapter 5: History</li>
+<li><a href="#chapter1:thinkinginversions">Chapter 1: Thinking in Versions</a></li>
+<li><a href="#chapter2:basics">Chapter 2: Basics</a></li>
+<li><a href="#chapter3:branches">Chapter 3: Branches</a></li>
+<li><a href="#chapter4:remotes">Chapter 4: Remotes</a></li>
+<li><a href="#chapter5:history">Chapter 5: History</a></li>
+<li><a href="#additionalnotes">Additional notes</a></li>
 </ol>
 
-<h2>Chapter 1: Thinking in Versions</h2>
+<h2 id="chapter1:thinkinginversions">Chapter 1: Thinking in Versions</h2>
 
 <p>Version control is a practice as much as it is a tool we use.</p>
 
-<p>Git keeps a copy of every version of a project inside a <strong>repository</strong>. Versions are <strong>committed</strong> to the repo in logical steps. Commits are organised into <strong>branches</strong>, with a master branch that represents the offical, primary version. Commits can be thought of as <em>significant changes</em>.</p>
+<p>Git keeps a copy of every version of a project inside a <strong>repository</strong>. Versions are <strong>committed</strong> to the repo in logical steps. Commits are organised into <strong>branches</strong>, with a master branch that represents the official, primary version. Commits can be thought of as <em>significant changes</em>.</p>
 
 <p>Git was invented by Linus Torvalds to help with the Linux project. Git is designed to be decentralised. This means there is not just one source of the code base, but many sources. Each developer works on their own local copy of a project.</p>
 
@@ -34,17 +201,17 @@ checkout | <code>git checkout</code> | Use to switch over to a branch, or to rol
 <p>Git has more than seventy-five command-line functions, every single one of which has a specific job, with specific inputs and expected results.</p>
 </blockquote>
 
-<h3>Personal notes</h3>
+<h3 id="personalnotes">Personal notes</h3>
 
 <p>Git is different from the Dropbox style of version control. Dropbox automatically retains a copy of a file every time it is saved, but only keeps five of the most recent copies. Git, on the other hand, does not do this automatically and waits for you to decide when a copy should be saved. It does, however, retain every single copy that you commit.</p>
 
-<h2>Chapter 2: Basics</h2>
+<h2 id="chapter2:basics">Chapter 2: Basics</h2>
 
-<h3>Using Git for the first time.</h3>
+<h3 id="usinggitforthefirsttime.">Using Git for the first time.</h3>
 
 <p>If you open up the Terminal app on a Mac, and type <code>git</code>, your Mac will prompt you to install the Apple Command Line Tools, which includes Git.</p>
 
-<h3>Some basic shell commands</h3>
+<h3 id="somebasicshellcommands">Some basic shell commands</h3>
 
 <p>These are not specific to Git but are useful for navigating around folders on the command line.</p>
 
@@ -61,16 +228,16 @@ Example: <code>mkdir css</code> will make a new folder, in the current location,
 
 <p>All the tasks above can be done by using the Finder window instead.</p>
 
-<p>Git commands have a standard format: <code>git commandName parameter1 parameter2 --option</code>. There are over 100 'commandName' that can be used. Many of the options will have a shortcut eg. --global can be written as -g.</p>
+<p>Git commands have a standard format: <code>git commandName parameter1 parameter2 --option</code>. There are over 100 &#8216;commandName&#8217; that can be used. Many of the options will have a shortcut eg. &#8211;global can be written as -g.</p>
 
-<h3>Configuring Git</h3>
+<h3 id="configuringgit">Configuring Git</h3>
 
-<p><code>git config --global user.name &quot;User Name&quot;</code> will change the username associated with all commits on this machine.
-<code>git config --global user.email &quot;user.name@email.com&quot;</code> will change the email address associated with the username.</p>
+<p><code>git config --global user.name &quot;User Name&quot;</code> will change the user name associated with all commits on this machine.
+<code>git config --global user.email &quot;user.name@email.com&quot;</code> will change the email address associated with the user name.</p>
 
 <p><code>--global</code> can be omitted to change settings on the current repository only.</p>
 
-<h3>Creating a new repository</h3>
+<h3 id="creatinganewrepository">Creating a new repository</h3>
 
 <p>Firstly, a folder must be created to work in. This can be done either through the command line, or within Finder. Next, navigate to the new folder in the Terminal window, and type <code>git init</code> to start the new repository.</p>
 
@@ -78,12 +245,12 @@ Example: <code>mkdir css</code> will make a new folder, in the current location,
 Example: <code>git clone https://clinentco.co/our-website.git</code>.</p>
 
 <blockquote>
-<p>Git proceeds by addition. Even though files in your project can be created, deleted, or changed, the commits tracking those changes are always <em>added</em>. When you remove a file, you're adding a commit.</p>
+<p>Git proceeds by addition. Even though files in your project can be created, deleted, or changed, the commits tracking those changes are always <em>added</em>. When you remove a file, you&#8217;re adding a commit.</p>
 </blockquote>
 
 <p>You can check the current state of your repository at any time by type <code>git status</code>.</p>
 
-<p>Before a file can be committed to the repository, it needs to be added to Git's database (<em>staged</em>). To do this, use the command <code>git add</code>, followed by the file name.<br/>
+<p>Before a file can be committed to the repository, it needs to be added to Git&#8217;s database (<em>staged</em>). To do this, use the command <code>git add</code>, followed by the file name.<br/>
 Example: <code>git add index.html</code><br/>
 You can also add all files by typing <code>git add --all</code> or <code>git add .</code></p>
 
@@ -91,54 +258,56 @@ You can also add all files by typing <code>git add --all</code> or <code>git add
 
 <p>You can also add all files and commit them in one short command by typing <code>git commit -am</code>.</p>
 
-<p><strong>Note</strong>: Git has a very matter-of-fact personality, and generally won't give you a pat on the back if everything is going well. Don't expect a return message to say that your files were committed.</p>
+<p><strong>Note</strong>: Git has a very matter-of-fact personality, and generally won&#8217;t give you a pat on the back if everything is going well. Don&#8217;t expect a return message to say that your files were committed.</p>
 
-<h3>Deleting files</h3>
+<h3 id="deletingfiles">Deleting files</h3>
 
 <p>The command <code>git rm</code> is used to remove a file. This change then needs to be committed and pushed.</p>
 
-<h2>Chapter 3: Branches</h2>
+<h2 id="chapter3:branches">Chapter 3: Branches</h2>
 
-<p>Branches can be thought of as the <em>labels</em> in Gmail. It's possible for a single email to belong to multiple labels, and the same can be be said of files existing within multiple branches.
+<p>Branches can be thought of as the <em>labels</em> in Gmail. It&#8217;s possible for a single email to belong to multiple labels, and the same can be be said of files existing within multiple branches.
 Git always starts off with a master branch</p>
 
 <p>To create a new branch, type <code>git branch nameOfBranch</code>.</p>
 
-<p>Creating a new branch doesn't switch you to that branch.<br/>
+<p>Creating a new branch doesn&#8217;t switch you to that branch.<br/>
 Switch to the new branch by typing <code>git checkout nameOfBranch</code>.<br/>
 Switch back to the master by typing <code>git checkout master</code>. </p>
 
 <p>You can create and switch to a branch at the same time with <code>git checkout -b nameOfBranch</code></p>
 
-<h4>Merging</h4>
+<h4 id="merging">Merging</h4>
 
 <p>To merge, you need to checkout the branch that you wish to merge into, which will usually be the master: <code>git checkout master</code><br/>
 Next, type <code>git merge branchToBeMerged</code></p>
 
 <p>There are two different types of merges:
-1. A <em>fast-forward merge</em>, which is the simplest. This occurs when only the new branch has content that doesn't exist in the master branch. Changes are simply added.
+1. A <em>fast-forward merge</em>, which is the simplest. This occurs when only the new branch has content that doesn&#8217;t exist in the master branch. Changes are simply added.
 2. A <em>true merge</em> where Git needs to figure all the different changes between the two branches.</p>
 
-<h4>Merge conflicts</h4>
+<h4 id="mergeconflicts">Merge conflicts</h4>
 
 <p>A merge conflict occurs when a file has lines of code that overlap. Git will try to merge what it can automatically but will defer to the user to sort out remaining lines.</p>
 
 <p>Git will mark up the files that have conflicting code <em>conflict markers</em>. It will look like this:</p>
 
-<p><code>html
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+<pre><code class="html">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
  Some code
  =====
  Some other code
  &gt;&gt;&gt;&gt;&gt;&gt; branchName
-</code>
-Everything between the lines of angle brackets needs to be resolved. It doesn't matter how this is resolved, but it will become the master on the next commit.</p>
+</code></pre>
+
+<p>Everything between the lines of angle brackets needs to be resolved. It doesn&#8217;t matter how this is resolved, but it will become the master on the next commit.</p>
 
 <p>Once the conflict is resolved, the file can be staged and committed again.</p>
 
 <p>To reduce merge conflicts, you can merge new commits from the master into your current branch.</p>
 
-<h2>Chapter 4: Remotes</h2>
+<p><strong>Notes</strong> Deleting a branch is easy. Type <code>git branch -d nameOfBranch</code>. The branch will only be deleted if it has already been merged.</p>
+
+<h2 id="chapter4:remotes">Chapter 4: Remotes</h2>
 
 <p>Remote repositories are copies of your Git project that live somewhere else, like a separate server. A remote can also just be a different folder on your computer.</p>
 
@@ -152,30 +321,52 @@ Example: <code>git push origin master</code></p>
 <p>To pull the most recent changes from the remote repository, type: <code>git pull remoteName branchName</code><br/>
 Example: <code>git pull origin master</code></p>
 
-<p>Branches do not get pushed to the remote, unless you specify. You can set up branches to be tracked so that you don't have to specifiy which remote and which branch will push/pull changes.<br/>
+<p>Branches do not get pushed to the remote, unless you specify. You can set up branches to be tracked so that you don&#8217;t have to specifiy which remote and which branch will push/pull changes.<br/>
 To do this, type <code>git push --set-upstream origin branchName</code> You can also just use <code>-u</code>.</p>
 
 <p>You can use the command <code>fetch</code> instead of pull to get everything from an entire remote repository at once. Type <code>git fetch origin</code>.</p>
 
-<h4>Adding a remote</h4>
+<h4 id="addingaremote">Adding a remote</h4>
 
 <p>Type <code>git remote add origin url</code><br/>
 Example: <code>git remote add origin https://gitforhumans.info/our-website.git</code></p>
 
-<p><code>git remote</code> - Shows a list of remotes that we've added (shows name only, not URL).
+<p><code>git remote</code> - Shows a list of remotes that we&#8217;ve added (shows name only, not URL).
 <code>git push origin branchName</code> – Push a particular branch to the remote</p>
 
-<h2>Chapter 5: History</h2>
+<h2 id="chapter5:history">Chapter 5: History</h2>
 
 <p>Use <code>git log</code> to have a look at all the commits, in reverse chronological order.</p>
 
-<p>You can simplify the output of the log by typing <code>git log --pretty=oneline</code>.</p>
+<p>You can simplify the output of the log by typing <code>git log --pretty=oneline</code> or <code>git log --oneline</code></p>
 
 <p>You can also look at the history of a particular files by typing <code>git log fileName</code></p>
 
-<h4>Rolling back to previous versions</h4>
+<h4 id="rollingbacktopreviousversions">Rolling back to previous versions</h4>
 
-<p><code>git checkout ID</code> - Checkout a particular commit by ID. This can also be done by tag.</p>
+<p><code>git checkout ID</code> - Checkout a particular commit by ID. This can also be done by tags.</p>
 
 <p>So, checking out a commit will give you that specific commit. It is not a branch. It is basically used to check how the app was running at that particular time.
 Returning from the detached head state is easy - just checkout a branch again.</p>
+
+<h2 id="additionalnotes">Additional notes</h2>
+
+<p>Additional Git commands that are not covered in the book but may be helpful for beginners.</p>
+
+<h4 id="stash">Stash</h4>
+
+<p>Stash works a bit like a clipboard. It cuts all the unstaged changes in your current working folder and holds on to them until you are ready to paste them back down in place. This is useful if you are busy working on a branch and need to jump over to another branch before you&#8217;ve had a chance to finish your work and make a proper commit. It&#8217;s also useful if you&#8217;ve started editing the wrong branch by mistake.</p>
+
+<p>Type <code>git stash</code> to grab all your current changes. After doing whatever it is you need to do, type <code>git stash pop</code> to plonk your work back down in place.</p>
+
+<h4 id="cherrypicking">Cherry picking</h4>
+
+<p>Cherry picking is used to take a particular commit from one branch and apply it to another branch. Start off on the branch you want to apply the changes to then type <code>git cherry-pick commitID</code>. You can find the commit ID that you want to cherry pick by looking through the log (<code>git log</code>).</p>
+
+<p>Other resources for continued learning:</p>
+
+<p>24 Ways article on <a href="https://24ways.org/2014/dealing-with-emergencies-in-git/">dealing with emergencies</a><br/>
+Free course on <a href="https://github.com/blog/2083-start-learning-git-and-github-today-with-self-paced-training">learning Git</a></p>
+
+</body>
+</html>

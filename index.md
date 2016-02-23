@@ -1,11 +1,18 @@
 # Git for Humans
 
-## Quick reference to all commands within the book
+They say Linus Torvalds designed and built Git in two weeks.  
+Me, I read this book, I wrote summaries, I did it all in 24 days.  
+And while it's true that I'd used git for years prior,  
+It did not aid this rapid pace.
+
+Git for Humans, from A Book Apart, [is available here](https://abookapart.com/products/git-for-humans)
+
+## Quick reference for commands in this book
+
 Name | Command | Usage
 --- | --- | ---
-checkout | `git checkout` | Switch over to a branch, or roll back to a particular commit
-user name | `git config --global user.name "User Name"` | Change the user name
-user email | `git config --global user.email"` | Change the email associated with the user name
+config user name | `git config --global user.name "User Name"` | Change the user name
+config user email | `git config --global user.email"` | Change the email associated with the user name
 init | `git init` | Create a new repo
 clone | `git clone url` | Create a clone of the repo
 status | `git status` | Check the current state of the repo
@@ -25,18 +32,22 @@ pull from remote | `git pull remoteName branchName` | Pull from the remote to th
 track branch | `git push -u origin branchName` | Track a branch
 add remote | `git remote add origin URL` | Set up a remote
 show remotes | `git remote` | Show a list of branches
+show history | `git log` | Show commit history
+show pretty history | `git log --oneline` | Show history as single line commits
+show history of file | `git log fileName` | Show history of one file
+roll back to commit | `git checkout commitID` | Rewind back to an older commit
+begin stash | `git stash` | Create a stash of current work
+end stash | `git stash pop` | Paste down current stash
+cherry pick | `git cherry-pick commitID` | Take changes from particular commit
 
-
-
-A summary of each chapter of the book.
 
 ### Contents
-1. Chapter 1: Thinking in Versions
-2. Chapter 2: Basics
-3. Chapter 3: Branches
-4. Chapter 4: Remotes
-5. Chapter 5: History
-6. Chapter 6: Additional notes
+1. [Chapter 1: Thinking in Versions](#chapter1:thinkinginversions)
+2. [Chapter 2: Basics](#chapter2:basics)
+3. [Chapter 3: Branches](#chapter3:branches)
+4. [Chapter 4: Remotes](#chapter4:remotes)
+5. [Chapter 5: History](#chapter5:history)
+6. [Additional notes](#additionalnotes)
 
 ## Chapter 1: Thinking in Versions
 
@@ -184,18 +195,18 @@ Example: `git remote add origin https://gitforhumans.info/our-website.git`
 
 Use  `git log` to have a look at all the commits, in reverse chronological order.
 
-You can simplify the output of the log by typing `git log --pretty=oneline` or `git log oneline`
+You can simplify the output of the log by typing `git log --pretty=oneline` or `git log --oneline`
 
 You can also look at the history of a particular files by typing `git log fileName`
 
 #### Rolling back to previous versions
 
-`git checkout ID` - Checkout a particular commit by ID. This can also be done by tag.
+`git checkout ID` - Checkout a particular commit by ID. This can also be done by tags.
 
 So, checking out a commit will give you that specific commit. It is not a branch. It is basically used to check how the app was running at that particular time.
 Returning from the detached head state is easy - just checkout a branch again.
 
-## Chapter 6: Additional notes
+## Additional notes
 
 Additional Git commands that are not covered in the book but may be helpful for beginners.
 
@@ -212,5 +223,5 @@ Cherry picking is used to take a particular commit from one branch and apply it 
 
 Other resources for continued learning:
 
-https://24ways.org/2014/dealing-with-emergencies-in-git/
-https://github.com/blog/2083-start-learning-git-and-github-today-with-self-paced-training
+24 Ways article on [dealing with emergencies](https://24ways.org/2014/dealing-with-emergencies-in-git/)  
+Free course on [learning Git](https://github.com/blog/2083-start-learning-git-and-github-today-with-self-paced-training)
