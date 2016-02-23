@@ -3,7 +3,29 @@
 ## Quick reference to all commands within the book
 Name | Command | Usage
 --- | --- | ---
-checkout | `git checkout` | Use to switch over to a branch, or to roll back to a particular commit.
+checkout | `git checkout` | Switch over to a branch, or roll back to a particular commit
+user name | `git config --global user.name "User Name"` | Change the user name
+user email | `git config --global user.email"` | Change the email associated with the user name
+init | `git init` | Create a new repo
+clone | `git clone url` | Create a clone of the repo
+status | `git status` | Check the current state of the repo
+staging | `git add fileName` | Add this filename to staging
+add all | `git add .`| Add all files with changes to staging
+commit | `git commit -m "Insert message"` | Make a commit
+add and commit | `git commit -am` | Add all files and make the commit
+delete file | `git rm` | Removes a file
+show branches | `git branch` | Show a list of branches
+create branch | `git branch nameOfBranch` | Create a new branch
+switch branches | `git checkout nameOfBranch` | Switch to this branch
+create and switch | `git checkout -b nameOfBranch` | Create a new branch and switch to it
+merge | `git merge branchToBeMerged` | Merge a branch into the current branch
+delete branch | `git branch -d nameOfBranch` | Delete a branch that has been merged
+push to remote | `git push remoteName branchName` | Push to the remote, this branch
+pull from remote | `git pull remoteName branchName` | Pull from the remote to this branch
+track branch | `git push -u origin branchName` | Track a branch
+add remote | `git remote add origin URL` | Set up a remote
+show remotes | `git remote` | Show a list of branches
+
 
 
 A summary of each chapter of the book.
@@ -20,7 +42,7 @@ A summary of each chapter of the book.
 
 Version control is a practice as much as it is a tool we use.
 
-Git keeps a copy of every version of a project inside a **repository**. Versions are **committed** to the repo in logical steps. Commits are organised into **branches**, with a master branch that represents the offical, primary version. Commits can be thought of as _significant changes_.
+Git keeps a copy of every version of a project inside a **repository**. Versions are **committed** to the repo in logical steps. Commits are organised into **branches**, with a master branch that represents the official, primary version. Commits can be thought of as _significant changes_.
 
 Git was invented by Linus Torvalds to help with the Linux project. Git is designed to be decentralised. This means there is not just one source of the code base, but many sources. Each developer works on their own local copy of a project.
 
@@ -61,8 +83,8 @@ Git commands have a standard format: `git commandName parameter1 parameter2 --op
 
 ### Configuring Git
 
-`git config --global user.name "User Name"` will change the username associated with all commits on this machine.
-`git config --global user.email "user.name@email.com"` will change the email address associated with the username.
+`git config --global user.name "User Name"` will change the user name associated with all commits on this machine.
+`git config --global user.email "user.name@email.com"` will change the email address associated with the user name.
 
 `--global` can be omitted to change settings on the current repository only.
 
@@ -89,10 +111,6 @@ You can also add all files and commit them in one short command by typing `git c
 
 ### Deleting files
 The command `git rm` is used to remove a file. This change then needs to be committed and pushed.
-
-
-
-
 
 ## Chapter 3: Branches
 Branches can be thought of as the _labels_ in Gmail. It's possible for a single email to belong to multiple labels, and the same can be be said of files existing within multiple branches.
