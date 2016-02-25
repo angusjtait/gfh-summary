@@ -225,3 +225,18 @@ Other resources for continued learning:
 
 24 Ways article on [dealing with emergencies](https://24ways.org/2014/dealing-with-emergencies-in-git/)  
 Free course on [learning Git](https://github.com/blog/2083-start-learning-git-and-github-today-with-self-paced-training)
+
+#### Some basic terminal commands
+
+Command | Meaning
+--- | ---
+`pwd` | Print working directory
+`mkdir` | Make directory
+`cd` | Change directory
+`..` | Current directory's parent
+`ls` | List
+`ls -F` | Show folders with forward-slash
+`ls directory-name` | Show list of files within folder
+`ls ..` | Show list of files within parent folder
+`rm filename` | Remove this file
+`mv fileName1 fileName2` | Move (rename) fileName1 to fileName2

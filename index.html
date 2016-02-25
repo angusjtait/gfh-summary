@@ -32,6 +32,21 @@ It did not aid this rapid pace.</p>
 
 <tbody>
 <tr>
+	<td style="text-align:left;">init</td>
+	<td style="text-align:left;"><code>git init</code></td>
+	<td style="text-align:left;">Create a new repo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">clone</td>
+	<td style="text-align:left;"><code>git clone URL</code></td>
+	<td style="text-align:left;">Create a clone of the repo</td>
+</tr>
+<tr>
+	<td style="text-align:left;">status</td>
+	<td style="text-align:left;"><code>git status</code></td>
+	<td style="text-align:left;">Check the current state of the repo</td>
+</tr>
+<tr>
 	<td style="text-align:left;">config user name</td>
 	<td style="text-align:left;"><code>git config --global user.name &quot;User Name&quot;</code></td>
 	<td style="text-align:left;">Change the user name</td>
@@ -40,21 +55,6 @@ It did not aid this rapid pace.</p>
 	<td style="text-align:left;">config user email</td>
 	<td style="text-align:left;"><code>git config --global user.email&quot;</code></td>
 	<td style="text-align:left;">Change the email associated with the user name</td>
-</tr>
-<tr>
-	<td style="text-align:left;">init</td>
-	<td style="text-align:left;"><code>git init</code></td>
-	<td style="text-align:left;">Create a new repo</td>
-</tr>
-<tr>
-	<td style="text-align:left;">clone</td>
-	<td style="text-align:left;"><code>git clone url</code></td>
-	<td style="text-align:left;">Create a clone of the repo</td>
-</tr>
-<tr>
-	<td style="text-align:left;">status</td>
-	<td style="text-align:left;"><code>git status</code></td>
-	<td style="text-align:left;">Check the current state of the repo</td>
 </tr>
 <tr>
 	<td style="text-align:left;">staging</td>
@@ -73,7 +73,7 @@ It did not aid this rapid pace.</p>
 </tr>
 <tr>
 	<td style="text-align:left;">add and commit</td>
-	<td style="text-align:left;"><code>git commit -am</code></td>
+	<td style="text-align:left;"><code>git commit -am &quot;Insert message&quot;</code></td>
 	<td style="text-align:left;">Add all files and make the commit</td>
 </tr>
 <tr>
@@ -103,8 +103,8 @@ It did not aid this rapid pace.</p>
 </tr>
 <tr>
 	<td style="text-align:left;">merge</td>
-	<td style="text-align:left;"><code>git merge branchToBeMerged</code></td>
-	<td style="text-align:left;">Merge a branch into the current branch</td>
+	<td style="text-align:left;"><code>git merge otherBranch</code></td>
+	<td style="text-align:left;">Merge otherBranch into the current branch</td>
 </tr>
 <tr>
 	<td style="text-align:left;">delete branch</td>
@@ -134,7 +134,7 @@ It did not aid this rapid pace.</p>
 <tr>
 	<td style="text-align:left;">show remotes</td>
 	<td style="text-align:left;"><code>git remote</code></td>
-	<td style="text-align:left;">Show a list of branches</td>
+	<td style="text-align:left;">Show a list of remotes</td>
 </tr>
 <tr>
 	<td style="text-align:left;">show history</td>
@@ -159,7 +159,7 @@ It did not aid this rapid pace.</p>
 <tr>
 	<td style="text-align:left;">begin stash</td>
 	<td style="text-align:left;"><code>git stash</code></td>
-	<td style="text-align:left;">Create a stash of current work</td>
+	<td style="text-align:left;">Create a clipboard of current changes</td>
 </tr>
 <tr>
 	<td style="text-align:left;">end stash</td>
@@ -367,6 +367,65 @@ Returning from the detached head state is easy - just checkout a branch again.</
 
 <p>24 Ways article on <a href="https://24ways.org/2014/dealing-with-emergencies-in-git/">dealing with emergencies</a><br/>
 Free course on <a href="https://github.com/blog/2083-start-learning-git-and-github-today-with-self-paced-training">learning Git</a></p>
+
+<h4 id="somebasicterminalcommands">Some basic terminal commands</h4>
+
+<table>
+<colgroup>
+<col style="text-align:left;"/>
+<col style="text-align:left;"/>
+</colgroup>
+
+<thead>
+<tr>
+	<th style="text-align:left;">Command</th>
+	<th style="text-align:left;">Meaning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+	<td style="text-align:left;"><code>pwd</code></td>
+	<td style="text-align:left;">Print working directory</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>mkdir</code></td>
+	<td style="text-align:left;">Make directory</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>cd</code></td>
+	<td style="text-align:left;">Change directory</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>..</code></td>
+	<td style="text-align:left;">Current directory&#8217;s parent</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>ls</code></td>
+	<td style="text-align:left;">List</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>ls -F</code></td>
+	<td style="text-align:left;">Show folders with forward-slash</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>ls directory-name</code></td>
+	<td style="text-align:left;">Show list of files within folder</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>ls ..</code></td>
+	<td style="text-align:left;">Show list of files within parent folder</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>rm filename</code></td>
+	<td style="text-align:left;">Remove this file</td>
+</tr>
+<tr>
+	<td style="text-align:left;"><code>mv fileName1 fileName2</code></td>
+	<td style="text-align:left;">Move (rename) fileName1 to fileName2</td>
+</tr>
+</tbody>
+</table>
 
 </body>
 </html>
