@@ -3,7 +3,7 @@
 They say Linus Torvalds designed and built Git in two weeks.  
 Me, I read this book, I wrote summaries, I did it all in 24 days.  
 And while it's true that I'd used git for years prior,  
-It did not aid this rapid pace.
+it did not aid this rapid pace.
 
 Git for Humans, from A Book Apart, [is available here](https://abookapart.com/products/git-for-humans)
 
