@@ -11,32 +11,32 @@ Git for Humans, from A Book Apart, [is available here](https://abookapart.com/pr
 
 Name | Command | Usage
 --- | --- | ---
+init | `git init` | Create a new repo
+clone | `git clone URL` | Create a clone of the repo
+status | `git status` | Check the current state of the repo
 config user name | `git config --global user.name "User Name"` | Change the user name
 config user email | `git config --global user.email"` | Change the email associated with the user name
-init | `git init` | Create a new repo
-clone | `git clone url` | Create a clone of the repo
-status | `git status` | Check the current state of the repo
 staging | `git add fileName` | Add this filename to staging
 add all | `git add .`| Add all files with changes to staging
 commit | `git commit -m "Insert message"` | Make a commit
-add and commit | `git commit -am` | Add all files and make the commit
+add and commit | `git commit -am "Insert message"` | Add all files and make the commit
 delete file | `git rm` | Removes a file
 show branches | `git branch` | Show a list of branches
 create branch | `git branch nameOfBranch` | Create a new branch
 switch branches | `git checkout nameOfBranch` | Switch to this branch
 create and switch | `git checkout -b nameOfBranch` | Create a new branch and switch to it
-merge | `git merge branchToBeMerged` | Merge a branch into the current branch
+merge | `git merge otherBranch` | Merge otherBranch into the current branch
 delete branch | `git branch -d nameOfBranch` | Delete a branch that has been merged
 push to remote | `git push remoteName branchName` | Push to the remote, this branch
 pull from remote | `git pull remoteName branchName` | Pull from the remote to this branch
 track branch | `git push -u origin branchName` | Track a branch
 add remote | `git remote add origin URL` | Set up a remote
-show remotes | `git remote` | Show a list of branches
+show remotes | `git remote` | Show a list of remotes
 show history | `git log` | Show commit history
 show pretty history | `git log --oneline` | Show history as single line commits
 show history of file | `git log fileName` | Show history of one file
 roll back to commit | `git checkout commitID` | Rewind back to an older commit
-begin stash | `git stash` | Create a stash of current work
+begin stash | `git stash` | Create a clipboard of current changes
 end stash | `git stash pop` | Paste down current stash
 cherry pick | `git cherry-pick commitID` | Take changes from particular commit
 
