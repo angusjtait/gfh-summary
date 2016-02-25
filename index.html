@@ -1,29 +1,45 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Git for Humans, summary by angusjtait</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">Git for Humans, summary</h1>
-      <h2 class="project-tagline">A summary of the book Git for Humans by David Demaree</h2>
-      <a href="https://github.com/angusjtait/gfh-summary" class="btn">View on GitHub</a>
-      <a href="https://github.com/angusjtait/gfh-summary/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/angusjtait/gfh-summary/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <div class="wrapper">
+      <header>
+        <h1>Git for Humans, summary</h1>
+        <p>A summary of the book Git for Humans by David Demaree</p>
 
-    <section class="main-content">
-      <h1>
+        <p class="view"><a href="https://github.com/angusjtait/git-for-humans-summary">View the Project on GitHub <small>angusjtait/git-for-humans-summary</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/angusjtait/git-for-humans-summary/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/angusjtait/git-for-humans-summary/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/angusjtait/git-for-humans-summary">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
 <a id="git-for-humans" class="anchor" href="#git-for-humans" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Git for Humans</h1>
 
+<p>They say Linus Torvalds designed and built Git in two weeks.<br>
+Me, I read this book, I wrote summaries, I did it all in 24 days.<br>
+And while it's true that I'd used git for years prior,<br>
+It did not aid this rapid pace.</p>
+
+<p>Git for Humans, from A Book Apart, <a href="https://abookapart.com/products/git-for-humans">is available here</a></p>
+
 <h2>
-<a id="quick-reference-to-all-commands-within-the-book" class="anchor" href="#quick-reference-to-all-commands-within-the-book" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quick reference to all commands within the book</h2>
+<a id="quick-reference-for-commands-in-this-book" class="anchor" href="#quick-reference-for-commands-in-this-book" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quick reference for commands in this book</h2>
 
 <table>
 <thead>
@@ -35,14 +51,147 @@
 </thead>
 <tbody>
 <tr>
-<td>checkout</td>
-<td><code>git checkout</code></td>
-<td>Use to switch over to a branch, or to roll back to a particular commit.</td>
+<td>init</td>
+<td><code>git init</code></td>
+<td>Create a new repo</td>
+</tr>
+<tr>
+<td>clone</td>
+<td><code>git clone URL</code></td>
+<td>Create a clone of the repo</td>
+</tr>
+<tr>
+<td>status</td>
+<td><code>git status</code></td>
+<td>Check the current state of the repo</td>
+</tr>
+<tr>
+<td>config user name</td>
+<td><code>git config --global user.name "User Name"</code></td>
+<td>Change the user name</td>
+</tr>
+<tr>
+<td>config user email</td>
+<td><code>git config --global user.email"</code></td>
+<td>Change the email associated with the user name</td>
+</tr>
+<tr>
+<td>staging</td>
+<td><code>git add fileName</code></td>
+<td>Add this filename to staging</td>
+</tr>
+<tr>
+<td>add all</td>
+<td><code>git add .</code></td>
+<td>Add all files with changes to staging</td>
+</tr>
+<tr>
+<td>commit</td>
+<td><code>git commit -m "Insert message"</code></td>
+<td>Make a commit</td>
+</tr>
+<tr>
+<td>add and commit</td>
+<td><code>git commit -am "Insert message"</code></td>
+<td>Add all files and make the commit</td>
+</tr>
+<tr>
+<td>delete file</td>
+<td><code>git rm</code></td>
+<td>Removes a file</td>
+</tr>
+<tr>
+<td>show branches</td>
+<td><code>git branch</code></td>
+<td>Show a list of branches</td>
+</tr>
+<tr>
+<td>create branch</td>
+<td><code>git branch nameOfBranch</code></td>
+<td>Create a new branch</td>
+</tr>
+<tr>
+<td>switch branches</td>
+<td><code>git checkout nameOfBranch</code></td>
+<td>Switch to this branch</td>
+</tr>
+<tr>
+<td>create and switch</td>
+<td><code>git checkout -b nameOfBranch</code></td>
+<td>Create a new branch and switch to it</td>
+</tr>
+<tr>
+<td>merge</td>
+<td><code>git merge otherBranch</code></td>
+<td>Merge otherBranch into the current branch</td>
+</tr>
+<tr>
+<td>delete branch</td>
+<td><code>git branch -d nameOfBranch</code></td>
+<td>Delete a branch that has been merged</td>
+</tr>
+<tr>
+<td>push to remote</td>
+<td><code>git push remoteName branchName</code></td>
+<td>Push to the remote, this branch</td>
+</tr>
+<tr>
+<td>pull from remote</td>
+<td><code>git pull remoteName branchName</code></td>
+<td>Pull from the remote to this branch</td>
+</tr>
+<tr>
+<td>track branch</td>
+<td><code>git push -u origin branchName</code></td>
+<td>Track a branch</td>
+</tr>
+<tr>
+<td>add remote</td>
+<td><code>git remote add origin URL</code></td>
+<td>Set up a remote</td>
+</tr>
+<tr>
+<td>show remotes</td>
+<td><code>git remote</code></td>
+<td>Show a list of remotes</td>
+</tr>
+<tr>
+<td>show history</td>
+<td><code>git log</code></td>
+<td>Show commit history</td>
+</tr>
+<tr>
+<td>show pretty history</td>
+<td><code>git log --oneline</code></td>
+<td>Show history as single line commits</td>
+</tr>
+<tr>
+<td>show history of file</td>
+<td><code>git log fileName</code></td>
+<td>Show history of one file</td>
+</tr>
+<tr>
+<td>roll back to commit</td>
+<td><code>git checkout commitID</code></td>
+<td>Rewind back to an older commit</td>
+</tr>
+<tr>
+<td>begin stash</td>
+<td><code>git stash</code></td>
+<td>Create a clipboard of current changes</td>
+</tr>
+<tr>
+<td>end stash</td>
+<td><code>git stash pop</code></td>
+<td>Paste down current stash</td>
+</tr>
+<tr>
+<td>cherry pick</td>
+<td><code>git cherry-pick commitID</code></td>
+<td>Take changes from particular commit</td>
 </tr>
 </tbody>
 </table>
-
-<p>A summary of each chapter of the book.</p>
 
 <h3>
 <a id="contents" class="anchor" href="#contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contents</h3>
@@ -53,6 +202,7 @@
 <li>Chapter 3: Branches</li>
 <li>Chapter 4: Remotes</li>
 <li>Chapter 5: History</li>
+<li><a href="#additionalnotes">Additional notes</a></li>
 </ol>
 
 <h2>
@@ -60,7 +210,7 @@
 
 <p>Version control is a practice as much as it is a tool we use.</p>
 
-<p>Git keeps a copy of every version of a project inside a <strong>repository</strong>. Versions are <strong>committed</strong> to the repo in logical steps. Commits are organised into <strong>branches</strong>, with a master branch that represents the offical, primary version. Commits can be thought of as <em>significant changes</em>.</p>
+<p>Git keeps a copy of every version of a project inside a <strong>repository</strong>. Versions are <strong>committed</strong> to the repo in logical steps. Commits are organised into <strong>branches</strong>, with a master branch that represents the official, primary version. Commits can be thought of as <em>significant changes</em>.</p>
 
 <p>Git was invented by Linus Torvalds to help with the Linux project. Git is designed to be decentralised. This means there is not just one source of the code base, but many sources. Each developer works on their own local copy of a project.</p>
 
@@ -108,8 +258,8 @@ Example: <code>mkdir css</code> will make a new folder, in the current location,
 <h3>
 <a id="configuring-git" class="anchor" href="#configuring-git" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuring Git</h3>
 
-<p><code>git config --global user.name "User Name"</code> will change the username associated with all commits on this machine.
-<code>git config --global user.email "user.name@email.com"</code> will change the email address associated with the username.</p>
+<p><code>git config --global user.name "User Name"</code> will change the user name associated with all commits on this machine.
+<code>git config --global user.email "user.name@email.com"</code> will change the email address associated with the user name.</p>
 
 <p><code>--global</code> can be omitted to change settings on the current repository only.</p>
 
@@ -127,9 +277,9 @@ Example: <code>git clone https://clinentco.co/our-website.git</code>.</p>
 
 <p>You can check the current state of your repository at any time by type <code>git status</code>.</p>
 
-<p>Before a file can be committed to the repository, it needs to be tracked (<em>staged</em>). To do this, use the command <code>git add</code>, followed by the file name.<br>
+<p>Before a file can be committed to the repository, it needs to be added to Git's database (<em>staged</em>). To do this, use the command <code>git add</code>, followed by the file name.<br>
 Example: <code>git add index.html</code><br>
-You can also add all files by typing <code>git add .</code></p>
+You can also add all files by typing <code>git add --all</code> or <code>git add .</code></p>
 
 <p>Once a file has been staged, it can now be committed. A commit requires a message from the user. Commits can be made by type <code>git commit --message "Insert message"</code>.</p>
 
@@ -137,23 +287,184 @@ You can also add all files by typing <code>git add .</code></p>
 
 <p><strong>Note</strong>: Git has a very matter-of-fact personality, and generally won't give you a pat on the back if everything is going well. Don't expect a return message to say that your files were committed.</p>
 
+<h3>
+<a id="deleting-files" class="anchor" href="#deleting-files" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deleting files</h3>
+
+<p>The command <code>git rm</code> is used to remove a file. This change then needs to be committed and pushed.</p>
+
 <h2>
 <a id="chapter-3-branches" class="anchor" href="#chapter-3-branches" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 3: Branches</h2>
+
+<p>Branches can be thought of as the <em>labels</em> in Gmail. It's possible for a single email to belong to multiple labels, and the same can be be said of files existing within multiple branches.
+Git always starts off with a master branch</p>
+
+<p>To create a new branch, type <code>git branch nameOfBranch</code>.</p>
+
+<p>Creating a new branch doesn't switch you to that branch.<br>
+Switch to the new branch by typing <code>git checkout nameOfBranch</code>.<br>
+Switch back to the master by typing <code>git checkout master</code>.  </p>
+
+<p>You can create and switch to a branch at the same time with <code>git checkout -b nameOfBranch</code></p>
+
+<h4>
+<a id="merging" class="anchor" href="#merging" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Merging</h4>
+
+<p>To merge, you need to checkout the branch that you wish to merge into, which will usually be the master: <code>git checkout master</code><br>
+Next, type <code>git merge branchToBeMerged</code></p>
+
+<p>There are two different types of merges:
+1. A <em>fast-forward merge</em>, which is the simplest. This occurs when only the new branch has content that doesn't exist in the master branch. Changes are simply added.
+2. A <em>true merge</em> where Git needs to figure all the different changes between the two branches.</p>
+
+<h4>
+<a id="merge-conflicts" class="anchor" href="#merge-conflicts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Merge conflicts</h4>
+
+<p>A merge conflict occurs when a file has lines of code that overlap. Git will try to merge what it can automatically but will defer to the user to sort out remaining lines.</p>
+
+<p>Git will mark up the files that have conflicting code <em>conflict markers</em>. It will look like this:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+ Some code
+ =====
+ Some other code
+ &gt;&gt;&gt;&gt;&gt;&gt; branchName</pre></div>
+
+<p>Everything between the lines of angle brackets needs to be resolved. It doesn't matter how this is resolved, but it will become the master on the next commit.</p>
+
+<p>Once the conflict is resolved, the file can be staged and committed again.</p>
+
+<p>To reduce merge conflicts, you can merge new commits from the master into your current branch.</p>
+
+<p><strong>Notes</strong> Deleting a branch is easy. Type <code>git branch -d nameOfBranch</code>. The branch will only be deleted if it has already been merged.</p>
 
 <h2>
 <a id="chapter-4-remotes" class="anchor" href="#chapter-4-remotes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 4: Remotes</h2>
 
+<p>Remote repositories are copies of your Git project that live somewhere else, like a separate server. A remote can also just be a different folder on your computer.</p>
+
+<p><strong>Note</strong> Bitbucket and Github are usually used as remotes.</p>
+
+<p>To send commits to and from the remotes, the commands <em>push</em> and <em>pull</em> are used.</p>
+
+<p>To push local repository to the remote, type <code>git push remoteName branchName</code>.<br>
+Example: <code>git push origin master</code></p>
+
+<p>To pull the most recent changes from the remote repository, type: <code>git pull remoteName branchName</code><br>
+Example: <code>git pull origin master</code></p>
+
+<p>Branches do not get pushed to the remote, unless you specify. You can set up branches to be tracked so that you don't have to specifiy which remote and which branch will push/pull changes.<br>
+To do this, type <code>git push --set-upstream origin branchName</code> You can also just use <code>-u</code>.</p>
+
+<p>You can use the command <code>fetch</code> instead of pull to get everything from an entire remote repository at once. Type <code>git fetch origin</code>.</p>
+
+<h4>
+<a id="adding-a-remote" class="anchor" href="#adding-a-remote" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Adding a remote</h4>
+
+<p>Type <code>git remote add origin url</code><br>
+Example: <code>git remote add origin https://gitforhumans.info/our-website.git</code></p>
+
+<p><code>git remote</code> - Shows a list of remotes that we've added (shows name only, not URL).
+<code>git push origin branchName</code> – Push a particular branch to the remote</p>
+
 <h2>
 <a id="chapter-5-history" class="anchor" href="#chapter-5-history" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chapter 5: History</h2>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/angusjtait/gfh-summary">Git for Humans, summary</a> is maintained by <a href="https://github.com/angusjtait">angusjtait</a>.</span>
+<p>Use  <code>git log</code> to have a look at all the commits, in reverse chronological order.</p>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+<p>You can simplify the output of the log by typing <code>git log --pretty=oneline</code> or <code>git log --oneline</code></p>
+
+<p>You can also look at the history of a particular files by typing <code>git log fileName</code></p>
+
+<h4>
+<a id="rolling-back-to-previous-versions" class="anchor" href="#rolling-back-to-previous-versions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Rolling back to previous versions</h4>
+
+<p><code>git checkout ID</code> - Checkout a particular commit by ID. This can also be done by tags.</p>
+
+<p>So, checking out a commit will give you that specific commit. It is not a branch. It is basically used to check how the app was running at that particular time.
+Returning from the detached head state is easy - just checkout a branch again.</p>
+
+<h2>
+<a id="additional-notes" class="anchor" href="#additional-notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Additional notes</h2>
+
+<p>Additional Git commands that are not covered in the book but may be helpful for beginners.</p>
+
+<h4>
+<a id="stash" class="anchor" href="#stash" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Stash</h4>
+
+<p>Stash works a bit like a clipboard. It cuts all the unstaged changes in your current working folder and holds on to them until you are ready to paste them back down in place. This is useful if you are busy working on a branch and need to jump over to another branch before you've had a chance to finish your work and make a proper commit. It's also useful if you've started editing the wrong branch by mistake.</p>
+
+<p>Type <code>git stash</code> to grab all your current changes. After doing whatever it is you need to do, type <code>git stash pop</code> to plonk your work back down in place.</p>
+
+<h4>
+<a id="cherry-picking" class="anchor" href="#cherry-picking" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Cherry picking</h4>
+
+<p>Cherry picking is used to take a particular commit from one branch and apply it to another branch. Start off on the branch you want to apply the changes to then type <code>git cherry-pick commitID</code>. You can find the commit ID that you want to cherry pick by looking through the log (<code>git log</code>).</p>
+
+<p>Other resources for continued learning:</p>
+
+<p>24 Ways article on <a href="https://24ways.org/2014/dealing-with-emergencies-in-git/">dealing with emergencies</a><br>
+Free course on <a href="https://github.com/blog/2083-start-learning-git-and-github-today-with-self-paced-training">learning Git</a></p>
+
+<h4>
+<a id="some-basic-terminal-commands" class="anchor" href="#some-basic-terminal-commands" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Some basic terminal commands</h4>
+
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pwd</code></td>
+<td>Print working directory</td>
+</tr>
+<tr>
+<td><code>mkdir</code></td>
+<td>Make directory</td>
+</tr>
+<tr>
+<td><code>cd</code></td>
+<td>Change directory</td>
+</tr>
+<tr>
+<td><code>..</code></td>
+<td>Current directory's parent</td>
+</tr>
+<tr>
+<td><code>ls</code></td>
+<td>List</td>
+</tr>
+<tr>
+<td><code>ls -F</code></td>
+<td>Show folders with forward-slash</td>
+</tr>
+<tr>
+<td><code>ls directory-name</code></td>
+<td>Show list of files within folder</td>
+</tr>
+<tr>
+<td><code>ls ..</code></td>
+<td>Show list of files within parent folder</td>
+</tr>
+<tr>
+<td><code>rm filename</code></td>
+<td>Remove this file</td>
+</tr>
+<tr>
+<td><code>mv fileName1 fileName2</code></td>
+<td>Move (rename) fileName1 to fileName2</td>
+</tr>
+</tbody>
+</table>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/angusjtait">angusjtait</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
-
-    </section>
-
-  
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
   </body>
 </html>
